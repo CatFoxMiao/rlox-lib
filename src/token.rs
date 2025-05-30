@@ -1,3 +1,7 @@
+use std::fmt;
+
+
+
 #[derive(Debug, PartialEq, Clone)]
 pub enum Literal{
     String(String),
@@ -64,4 +68,15 @@ pub struct Token{
     pub lexeme:String,
     pub literal:Literal,
     pub line:usize
+}
+
+impl fmt::Display for Token {
+    fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
+        write!(
+            f,
+            "{:?} {} {:?}",
+            self.token_type, self.lexeme, self.literal
+        )
+    }
+
 }
