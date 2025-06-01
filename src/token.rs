@@ -23,7 +23,6 @@ pub enum TokenType{
     Minus,
     Plus,
     Semicolon,
-    Slash,
     Star,
 
     // One or two chracter tokens
@@ -35,7 +34,7 @@ pub enum TokenType{
     GreaterEqual,
     Less,
     LessEqual,
-
+    Slash,
     // Literals
     Identifier,
     String,
